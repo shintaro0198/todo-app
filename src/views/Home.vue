@@ -23,19 +23,8 @@ export default {
   methods:{
     getSearch(text){
       this.searchContent = text
-      console.log(this.searchContent)
     },
-    detroit(){
-      console.log(this.$store.state.user.id)
-      console.log(this.$store.state.auth)
-    }
   },
-  async created(){
-    console.log(this.searchContent)
-  },
-  mounted(){
-    console.log(this.$store.state.auth)
-  }
 }
 </script>
 <style scoped>

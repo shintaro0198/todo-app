@@ -27,7 +27,6 @@ export default {
   props:["searchedText"],
   methods:{
     edit(id){
-      console.log(id)
       axios.put('https://damp-fjord-50020.herokuapp.com/api/task',{
         content : this.editedText,
         id : id,
@@ -41,7 +40,6 @@ export default {
       })
     },
     drop(deleteId){
-      console.log(deleteId)
       axios.delete('https://damp-fjord-50020.herokuapp.com/api/task/'+deleteId)
       .then(response=>{
         console.log(response)
@@ -57,14 +55,11 @@ export default {
         let task = value.data.data[i].content
         this. id =value.data.data[i].id
         this.check = i
-        console.log(this.id)
         this.tasks.push(task)
-        console.log(value)
       }
     },
   },
   async created(){
-    console.log(this.searchedText)
     await this.getTask()
   },
   computed:{

@@ -28,7 +28,6 @@ export default new Vuex.Store({
         password : password 
       })
         .then(response => {
-          console.log(response)
           commit('auth', response.data.auth)
           commit('user', response.data.data)
           if (this.state.auth === true) {
