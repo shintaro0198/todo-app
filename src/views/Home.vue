@@ -31,7 +31,6 @@ export default {
 #home{
   height: 100%;
   background: url(../assets/TaskTiming_Welcome.jpg);
-  background-color: red;
   background-size: cover;
 }
 .home-flex{
