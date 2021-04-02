@@ -21,7 +21,9 @@ export default {
       tasks :[],
       check : "",
       id:"",
-      editedText:""
+      editedText:"",
+      b:"",
+      c:""
     }
   },
   props:["searchedText"],
@@ -32,7 +34,7 @@ export default {
         id : id,
       })
       .then(response=>{
-        console.log(response)
+        this. b = response
         this.$router.go({
           path: this.$router.currentRoute.path,
               force: true,
@@ -42,7 +44,7 @@ export default {
     drop(deleteId){
       axios.delete('https://damp-fjord-50020.herokuapp.com/api/task/'+deleteId)
       .then(response=>{
-        console.log(response)
+        this. c = response
         this.$router.go({
           path: this.$router.currentRoute.path,
               force: true,

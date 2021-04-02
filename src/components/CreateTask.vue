@@ -11,7 +11,8 @@ import axios from "axios"
 export default {
   data() {
     return {
-      text:""
+      text:"",
+      a:""
     }
   },
   methods:{
@@ -21,7 +22,7 @@ export default {
         user_id : this.$store.state.user.id
       })
       .then(response=>{
-        console.log(response)
+        this. a = response
         this.$router.go({
           path: this.$router.currentRoute.path,
               force: true,

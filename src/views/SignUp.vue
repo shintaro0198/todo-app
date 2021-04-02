@@ -27,6 +27,7 @@ export default {
     return {
       email : "",
       password : "",
+      d:""
     }
   },
 
@@ -37,7 +38,7 @@ export default {
         'password' : this.password,
       })
       .then(response=>{
-        console.log(response);
+        this.d = response
         this.$router.push('/home');
       })
     }
