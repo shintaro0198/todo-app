@@ -12,7 +12,7 @@
       <p>
         パスワード
       </p>
-      <input type="text"
+      <input type="password"
       v-model="password">
       <br>
       <button class="login-button" @click="login">ログイン</button>
